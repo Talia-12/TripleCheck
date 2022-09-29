@@ -5,9 +5,9 @@ plugins {
 archivesBaseName = getArtifactID("fabric")
 
 loom {
-    mixin.defaultRefmapName = "yourmod.mixins.refmap.json"
+    mixin.defaultRefmapName = "triplecheck.mixins.refmap.json"
 
-    accessWidenerPath = file("src/main/resources/yourmod.accesswidener")
+    accessWidenerPath = file("src/main/resources/triplecheck.accesswidener")
 
     runs {
         client {

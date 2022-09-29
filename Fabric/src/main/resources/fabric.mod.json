@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "yourmod",
+  "id": "triplecheck",
   "version": "${version}",
 
-  "name": "Your Mod",
-  "description": "A blank mod template",
+  "name": "Triple Check",
+  "description": "A library for unit testing Minecraft mods (Forge and Fabric).",
   "authors": [
-    "petrak@ (aka gamma-delta)",
-    "grywo (just turning her work into a template)"
+    "Talia"
   ],
   "contact": {
     "homepage": "",
@@ -20,20 +19,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      {"adapter": "kotlin", "value": "yourmod.name.here.fabric.FabricInitializer"}
+      {"adapter": "kotlin", "value": "ram.talia.triplecheck.fabric.FabricInitializer"}
     ],
     "client": [
-      {"adapter": "kotlin", "value": "yourmod.name.here.fabric.FabricClientInitializer"}
+      {"adapter": "kotlin", "value": "ram.talia.triplecheck.fabric.FabricClientInitializer"}
     ],
     "fabric-datagen": [
-      "yourmod.name.here.datagen.FabricDataGenerators"
+      "ram.talia.triplecheck.datagen.FabricDataGenerators"
     ]
   },
   "mixins": [
-    "yourmod.plat.mixins.json",
-    "yourmod.mixins.json"
+    "triplecheck.plat.mixins.json",
+    "triplecheck.mixins.json"
   ],
-  "accessWidener": "yourmod.accesswidener",
+  "accessWidener": "triplecheck.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.13",

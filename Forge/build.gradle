@@ -71,7 +71,7 @@ minecraft {
             args '--mod', modID, '--all', '--output', file('../Common/src/generated/resources/'), '--existing', file('../Common/src/main/resources/')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'yourmod.xplat_datagen', 'true'
+            property 'triplecheck.xplat_datagen', 'true'
             mods {
                 create(modID) {
                     source sourceSets.main
@@ -88,7 +88,7 @@ minecraft {
             args '--mod', modID, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'yourmod.forge_datagen', 'true'
+            property 'triplecheck.forge_datagen', 'true'
             mods {
                 create(modID) {
                     source sourceSets.main
@@ -121,9 +121,9 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, "yourmod.mixins.refmap.json"
-    config "yourmod.plat.mixins.json"
-    config "yourmod_forge.mixins.json"
+    add sourceSets.main, "triplecheck.mixins.refmap.json"
+    config "triplecheck.plat.mixins.json"
+    config "triplecheck_forge.mixins.json"
 }
 
 tasks.withType(JavaCompile) {
